@@ -1,23 +1,49 @@
 import { getSpanishWords } from "../utils/api";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Spanish() {
-  const [spanishWordData, setWords] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [winner, setWinner] = useState(false);
   const [error, setError] = useState(null);
-  const [answer, setAnswer] = useState("");
+  const [clickedCorrectAnswers, setClickedCorrectAnswers] = useState([]);
+  const [randomWords, setRandomWords] = useState([]);
+
+  const wordRefs = useRef([]); // Refs for each word element to scroll to
 
   useEffect(() => {
+    fetchSpanishWords();
+  }, []);
+
+  const fetchSpanishWords = () => {
+    setLoading(true);
     getSpanishWords()
       .then((words) => {
-        setWords(words);
         setLoading(false);
+        setWinner(false);
+        setClickedCorrectAnswers([]);
+        setRandomWords(words.sort(() => 0.5 - Math.random()).slice(0, 8));
       })
       .catch((error) => {
         setError(error.message);
         setLoading(false);
       });
-  }, []);
+  };
+
+
+  const correctAnswers = randomWords.map((word) => {
+    return word.english;
+  });
+
+  useEffect(() => {
+    if (clickedCorrectAnswers.length > 0) {
+      const currentIndex = clickedCorrectAnswers.length - 1;
+      const nextWordRef = wordRefs.current[currentIndex + 1];
+      if (nextWordRef) {
+        nextWordRef.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }, [clickedCorrectAnswers, correctAnswers]);
+  
 
   if (loading) {
     return <p>Loading...</p>;
@@ -27,33 +53,44 @@ function Spanish() {
     return <p>Error: {error}</p>;
   }
 
-  const randomWords = spanishWordData
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 8);
+  if (winner) {
+    return (
+      <div className="home">
+        <p>8/8 Well Done!</p>
+        <button onClick={fetchSpanishWords}>Start a New Round</button>
+      </div>
+    );
+  }
 
-
-  // let answeredQuestions = [];
+ 
 
   return (
     <div className="home">
-      <p>Some Spanish Words to Learn</p>
       <ul className="words-list">
-        {randomWords.map((word) => (
-          <div key={word._id} className={`${answer === word.english ? 'correct-answer' : 'words-list-item'}`}>
-            <p>{word.word}</p>
-            <p>{word.sentence}</p>
-            {word.answers.map((answer) => (
+        {randomWords.map((word, index) => (
+          <div
+            key={word._id}
+            className="word"
+            ref={(el) => (wordRefs.current[index] = el)}
+          >
+            <p className="words-list-title">{word.word}</p>
+            <p className="words-list-sentence">{word.sentence}</p>
+            {word.answers.sort().map((answer) => (
               <button
-                
+                className="words-list-item"
                 key={answer}
-                onClick={() => {
+                onClick={(event) => {
                   if (answer === word.english) {
-                    setAnswer(answer);
-                    console.log(answer);
-                    console.log("correct");
-                    setAnswer("");
+                    setClickedCorrectAnswers((prevAnswers) => [
+                      ...prevAnswers,
+                      answer
+                    ]);
+                    event.target.classList.add("correct-answer");
+                    if(clickedCorrectAnswers.length === correctAnswers.length - 1){
+                      setWinner(true)
+                    }
                   } else {
-                    console.log("incorrect");
+                    event.target.classList.add("incorrect-answer");
                   }
                 }}
               >
@@ -66,4 +103,5 @@ function Spanish() {
     </div>
   );
 }
+
 export default Spanish;
