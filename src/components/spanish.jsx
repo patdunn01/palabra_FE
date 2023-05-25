@@ -29,7 +29,6 @@ function Spanish() {
       });
   };
 
-
   const correctAnswers = randomWords.map((word) => {
     return word.english;
   });
@@ -39,11 +38,28 @@ function Spanish() {
       const currentIndex = clickedCorrectAnswers.length - 1;
       const nextWordRef = wordRefs.current[currentIndex + 1];
       if (nextWordRef) {
-        nextWordRef.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => {
+          nextWordRef.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 450);
       }
     }
   }, [clickedCorrectAnswers, correctAnswers]);
-  
+
+  const handleAnswerClick = (event, answer, word) => {
+    if (answer === word.english) {
+      setClickedCorrectAnswers((prevAnswers) => [...prevAnswers, word.english]);
+      event.target.classList.add("correct-answer");
+      if (clickedCorrectAnswers.length === correctAnswers.length - 1) {
+        setTimeout(() => {
+          setWinner(true);
+        }, 700);
+        
+      }
+      event.target.closest(".word").classList.add("correctWord");
+    } else {
+      event.target.classList.add("incorrect-answer");
+    }
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -62,8 +78,6 @@ function Spanish() {
     );
   }
 
- 
-
   return (
     <div className="home">
       <ul className="words-list">
@@ -79,20 +93,7 @@ function Spanish() {
               <button
                 className="words-list-item"
                 key={answer}
-                onClick={(event) => {
-                  if (answer === word.english) {
-                    setClickedCorrectAnswers((prevAnswers) => [
-                      ...prevAnswers,
-                      answer
-                    ]);
-                    event.target.classList.add("correct-answer");
-                    if(clickedCorrectAnswers.length === correctAnswers.length - 1){
-                      setWinner(true)
-                    }
-                  } else {
-                    event.target.classList.add("incorrect-answer");
-                  }
-                }}
+                onClick={(event) => handleAnswerClick(event, answer, word)}
               >
                 {answer}
               </button>
