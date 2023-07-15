@@ -17,8 +17,12 @@ code {
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 4vw;
-  border: 1px solid grey;
+  border-bottom: 1px solid black;
   padding: 1vh;
+  align-content: center;
+  height: 10vh;
+  position: relative;
+  z-index: 2;
 }
 
 .burger-menu {
@@ -71,7 +75,8 @@ code {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 96vh;
+  height: 90vh;
+  background-color: rgb(238, 238, 238);
 }
 
 .home p{
@@ -83,24 +88,60 @@ code {
   max-height: auto;
 }
 
-.language-button-homepage{
+.language-button-homepage {
   background-color: rgb(225, 225, 225);
   margin: 1rem;
   border-radius: 100rem;
   padding: 1.5rem;
   border: 0px;
+  position: relative;
 }
 
-.language-button-homepage:hover{
+.language-button-homepage p {
+  font-size: 2vh;
+}
+
+.language-button-homepage:hover {
   background-color: rgb(214, 214, 214);
   cursor: pointer;
+  z-index: 1;
+  transform: scale(1.05);
+  transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
 }
+
 
 .language-button-homepage:active{
   background-color: antiquewhite;
 }
 
+.button-image{
+  height: 20vh;
+}
+
+.clicked .button-image {
+  animation: spin-scale 1.5s linear;
+  transform-origin: center;
+}
+
+@keyframes spin-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(180deg) scale(12);
+  }
+}
+
+.language-main{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 238, 238);
+}
+
 .words-list {
+  background-color: rgb(238, 238, 238);
   list-style: none;
   padding: 0;
   font-family: "Nabla", cursive;

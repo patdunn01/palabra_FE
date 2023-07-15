@@ -79,7 +79,7 @@ function Spanish() {
   }
 
   return (
-    <div className="home">
+    <div className="language-main">
       <ul className="words-list">
         {randomWords.map((word, index) => (
           <div
