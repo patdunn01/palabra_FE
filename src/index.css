@@ -30,6 +30,7 @@ code {
   height: 25px;
   display: flex;
   align-self: center;
+  justify-self: center;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
@@ -45,19 +46,24 @@ code {
 
 .open .burger-line:first-child {
   transform: translateY(10px) rotate(45deg);
+  align-self: center;
+  justify-self: center;
 }
 
 .open .burger-line:nth-child(2) {
   opacity: 0;
+  align-self: center;
+  justify-self: center;
 }
 
 .open .burger-line:last-child {
   transform: translateY(-10px) rotate(-45deg);
+  align-self: center;
+  justify-self: center;
 }
 
 .burger-menu-background{
   background-color: white;
-  border: 2px solid black;
   width: auto;
 }
 
@@ -68,6 +74,8 @@ code {
   color: black;
   text-decoration: none;
   margin-left: 1vw;
+  align-self: center;
+  justify-self: center;
 }
 
 .home{
@@ -205,6 +213,197 @@ code {
   border: red solid 3px;
 }
 
+.new_round_button{
+  font-size: medium;
+  margin: 10px;
+  border-radius: 20px;
+  border: 0;
+  padding: 10px;
+  background-color: #212121;
+  color:rgb(214, 214, 214);
+}
+
+.new_round_button:hover{
+  cursor: pointer;
+  color: #212121;
+  background-color: rgb(214, 214, 214);
+}
+
 .home {
   list-style: none;
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: auto;
+  padding: 5px;
+  background-color: #212121;
+}
+
+.footer-menu-list{
+  list-style-type: none;
+}
+
+.footer-menu-options{
+  order: 0;
+  color:rgb(214, 214, 214);
+  text-decoration: none;
+  margin: 1px;
+  display: block;
+  text-align: left;
+}
+
+.footer_logo{
+  justify-self: center;
+  align-self: center;
+  order: 4;
+  height: 100px;
+  margin: 10px;
+}
+
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.loading_icon{
+  height: 300px;
+  align-self: center;
+  justify-self: center;
+  margin: 40px;
+}
+
+#Set1{
+  animation: firstScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes firstScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set2{
+  animation: secondScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 0.2s;
+}
+
+@keyframes secondScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set3{
+  animation: thirdScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 0.4s;
+}
+
+@keyframes thirdScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set4{
+  animation: fourthScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 0.6s;
+}
+
+@keyframes fourthScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set5{
+  animation: fifthScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 0.8s;
+}
+
+@keyframes fifthScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set6{
+  animation: sixthScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 1s;
+}
+
+@keyframes sixthScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+#Set7{
+  animation: seventhScale 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-delay: 1.2s;
+}
+
+@keyframes seventhScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
 }

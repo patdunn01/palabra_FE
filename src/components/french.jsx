@@ -1,8 +1,8 @@
-import { getSpanishWords } from "../utils/api";
+import { getFrenchWords } from "../utils/api";
 import { useState, useEffect, useRef } from "react";
 import { ReactComponent as Loading } from "../icons/Loading.svg";
 
-function Spanish() {
+function French() {
   const [loading, setLoading] = useState(true);
   const [winner, setWinner] = useState(false);
   const [error, setError] = useState(null);
@@ -13,13 +13,13 @@ function Spanish() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetchSpanishWords();
+      fetchFrenchWords();
     }, 4000);
   }, []);
 
-  const fetchSpanishWords = () => {
+  const fetchFrenchWords = () => {
     setLoading(true);
-    getSpanishWords()
+    getFrenchWords()
       .then((words) => {
         setLoading(false);
         setWinner(false);
@@ -79,7 +79,9 @@ function Spanish() {
     return (
       <div className="home">
         <p>8/8 Well Done!</p>
-        <button className="new_round_button" onClick={fetchSpanishWords}>Learn More</button>
+        <button className="new_round_button" onClick={fetchFrenchWords}>
+          Learn More
+        </button>
       </div>
     );
   }
@@ -111,4 +113,4 @@ function Spanish() {
   );
 }
 
-export default Spanish;
+export default French;
