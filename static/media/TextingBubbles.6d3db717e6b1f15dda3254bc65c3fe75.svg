@@ -1,0 +1,11 @@
+<svg width="250px" height="250px" viewBox="0 0 2863 2893" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect id='text1' x="383" width="2480" height="652" rx="326" fill="#63E6A7"/>
+<rect id='text2' y="747" width="1813" height="652" rx="326" fill="#63A7E6"/>
+<rect id='text3' x="726" y="1494" width="2137" height="652" rx="326" fill="#63E6A7"/>
+
+<rect id='text4' y="2241" width="995" height="652" rx="326" fill="#63A7E6"/>
+<rect id='dot1' x="283" y="2520" width="93" height="93" rx="46.5" fill="#F1F1F1"/>
+<rect id='dot2' x="451" y="2520" width="93" height="93" rx="46.5" fill="#F1F1F1"/>
+<rect id='dot3'  x="619" y="2520" width="93" height="93" rx="46.5" fill="#F1F1F1"/>
+
+</svg>
