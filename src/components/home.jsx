@@ -7,6 +7,7 @@ function Home() {
   const [clickedButton, setClickedButton] = useState(null);
 
   const handleButtonClick = (route) => {
+    console.log(route)
     setClickedButton(route);
 
     setTimeout(() => {
