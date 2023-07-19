@@ -16,38 +16,44 @@ code {
   background-color: white;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 4vw;
+  grid-template-rows: auto;
   border-bottom: 1px solid black;
   padding: 1vh;
   align-content: center;
-  height: 10vh;
-  position: relative;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
   z-index: 2;
+  height: 100px;
+}
+
+.burger-menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .burger-menu {
   width: 37px;
   height: 25px;
   display: flex;
-  align-self: center;
-  justify-self: center;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
 .burger-line {
-  width: 100%;
+  width: 35px;
   height: 4px;
-  border-radius: 50vh;
+  border-radius: 50px;
   background-color: #000;
   transition: transform 0.3s ease;
 }
 
 .open .burger-line:first-child {
   transform: translateY(10px) rotate(45deg);
-  align-self: center;
-  justify-self: center;
 }
 
 .open .burger-line:nth-child(2) {
@@ -57,25 +63,37 @@ code {
 }
 
 .open .burger-line:last-child {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-11px) rotate(-45deg);
   align-self: center;
   justify-self: center;
 }
 
-.burger-menu-background{
+.burger-menu-background {
+  font-size: larger;
+  position: relative;
+  top: 0%;
+  right: 0%;
   background-color: white;
-  width: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
 }
 
-.menu-options{
-  display: block;
+.menu-options {
   font-family: "Nabla", cursive;
   font-family: "Poppins", sans-serif;
+  border-radius: 9px;
   color: black;
   text-decoration: none;
-  margin-left: 1vw;
-  align-self: center;
-  justify-self: center;
+  padding-left: 5px;
+  padding-right: 5px; /* Adds some right margin for spacing */
+}
+
+.menu-options:hover{
+  background-color: #21212155;;
 }
 
 .home{
@@ -93,7 +111,9 @@ code {
 }
 
 .home_page_logo{
-  max-height: auto;
+  height: 100px;
+  width: 400px;
+  padding: 2px;
 }
 
 .language-button-homepage {
@@ -235,34 +255,51 @@ code {
 
 .footer-container{
   display: grid;
+  align-items: center;
   grid-template-columns: 25% 25% 25% 25%;
   height: auto;
-  padding: 5px;
   background-color: #212121;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .footer-menu-list{
-  list-style-type: none;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .footer-menu-options{
+  text-decoration: none;
+}
+
+.footer-menu-options p{
+  width: 90px;
+  margin-left: 50px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-decoration: none;
   order: 0;
   color:rgb(214, 214, 214);
-  text-decoration: none;
-  margin: 1px;
-  display: block;
   text-align: left;
+  font-family: "Nabla", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-menu-options p:hover{
+  color: white;
 }
 
 .footer_logo{
+  width: 130px;
   justify-self: center;
   align-self: center;
   order: 4;
-  height: 100px;
-  margin: 10px;
+  height: 120px;
 }
 
-.about{
+.loading{
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -405,5 +442,369 @@ code {
   }
   60% {
     transform: scale(1);
+  }
+}
+
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about_paragraph{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 450px;
+  width: 1000px;
+  border-top: 2px solid #6060604f;
+}
+
+.about_line{
+  width: 70vw;
+  height: 2px;
+  background-color: #6060604f;
+  justify-self: center;
+  align-self: center;
+}
+
+
+.about_paragraph p{
+  color: #3a3a3a;
+  border: 3px solid rgba(255, 0, 0, 0);
+  font-size: 20px;
+  text-align: left;
+  line-height: 30px;
+  width: 540px;
+  align-self: center;
+  margin-left: 35px;
+}
+
+#about_bubble {
+  
+  transform-origin: center;
+  animation: bubble_animation 2s ease; /* Added animation properties */
+}
+
+@keyframes bubble_animation {
+  0% {
+    transform: rotate(-180deg) scale(0); /* Start position */
+  }
+  80% {
+    transform: rotate(-360deg) scale(1.1)
+  }
+  100% {
+    transform: rotate(-360deg) scale(1); /* End position */
+  }
+}
+
+#about_bubble_small{
+  transform-origin: center center;
+  animation: small_bubble_animation 2s ease;
+}
+
+@keyframes small_bubble_animation {
+  0% {
+    transform: rotate(180deg) scale(0); /* Start position */
+  }
+  80% {
+    transform: rotate(360deg) scale(0.9)
+  }
+  100% {
+    transform: rotate(360deg) scale(1); /* End position */
+  }
+}
+
+#text1{
+  animation: texting_bubble_animation1 15s infinite;
+  transform-origin: left top;
+}
+
+@keyframes texting_bubble_animation1 {
+  0% {
+    transform: scale(0);
+  }
+  10%{
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#text2{
+  scale: 0;
+  animation: texting_bubble_animation2 15s infinite;
+  transform-origin: right center;
+}
+
+@keyframes texting_bubble_animation2 {
+  0% {
+    transform: scale(0);
+  }
+  10%{
+    transform: scale(0);
+  }
+  20%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#text3{
+  scale: 0;
+  animation: texting_bubble_animation3 15s infinite;
+  transform-origin: left center;
+}
+
+@keyframes texting_bubble_animation3 {
+  0% {
+    transform: scale(0);
+  }
+  20%{
+    transform: scale(0);
+  }
+  30%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#text4{
+  scale: 0;
+  animation: texting_bubble_animation4 15s infinite;
+  transform-origin: right bottom;
+}
+
+@keyframes texting_bubble_animation4 {
+  0% {
+    transform: scale(0);
+  }
+  30%{
+    transform: scale(0);
+  }
+  40%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#dot1{
+  animation: dot_animation1 15s infinite;
+}
+
+@keyframes dot_animation1 {
+  0% {
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  41%{
+    opacity: 1;
+  }
+  45%{
+    transform: translateY(0%);
+  }
+  46.5%{
+    transform: translateY(-3%);
+  }
+  48%{
+    transform: translateY(0%);
+  }
+  65%{
+    transform: translateY(0%);
+  }
+  66.5%{
+    transform: translateY(-3%);
+  }
+  68%{
+    transform: translateY(0%);
+  }
+  85%{
+    transform: translateY(0%);
+  }
+  86.5%{
+    transform: translateY(-3%);
+  }
+  88%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  92%{
+    opacity: 0;
+  }
+}
+
+#dot2{
+  animation: dot_animation2 15s infinite;
+}
+
+@keyframes dot_animation2 {
+  0% {
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  41%{
+    opacity: 1;
+  }
+  46%{
+    transform: translateY(0%);
+  }
+  47.5%{
+    transform: translateY(-3%);
+  }
+  49%{
+    transform: translateY(0%);
+  }
+  66%{
+    transform: translateY(0%);
+  }
+  67.5%{
+    transform: translateY(-3%);
+  }
+  69%{
+    transform: translateY(0%);
+  }
+  86%{
+    transform: translateY(0%);
+  }
+  87.5%{
+    transform: translateY(-3%);
+  }
+  89%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  92%{
+    opacity: 0;
+  }
+}
+
+#dot3{
+  animation: dot_animation3 15s infinite;
+}
+
+@keyframes dot_animation3 {
+  0% {
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  41%{
+    opacity: 1;
+  }
+  47%{
+    transform: translateY(0%);
+  }
+  48.5%{
+    transform: translateY(-3%);
+  }
+  50%{
+    transform: translateY(0%);
+  }
+  67%{
+    transform: translateY(0%);
+  }
+  68.5%{
+    transform: translateY(-3%);
+  }
+  70%{
+    transform: translateY(0%);
+  }
+  87%{
+    transform: translateY(0%);
+  }
+  88.5%{
+    transform: translateY(-3%);
+  }
+  90%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  92%{
+    opacity: 0;
+  }
+}
+
+#Line{
+  stroke-dasharray: 1050;
+  stroke-dashoffset: 1050;
+  animation: drawLine 10s infinite forwards;
+}
+
+@keyframes drawLine {
+  10%{
+    stroke-dashoffset: 1050;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#Brain {
+  transform-origin: center left;
+  animation: brainPulse 10s infinite forwards;
+}
+
+@keyframes brainPulse
+ {
+  5% {
+    transform: scale(1.1);
+  }  
+  10% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#node {
+  opacity: 0;
+  animation: nodes 10s infinite forwards;
+}
+
+@keyframes nodes
+ {
+  14% {
+    opacity: 0;
+  }  
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

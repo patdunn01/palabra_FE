@@ -9,6 +9,8 @@ function Spanish() {
   const [clickedCorrectAnswers, setClickedCorrectAnswers] = useState([]);
   const [randomWords, setRandomWords] = useState([]);
 
+  console.log("spanish")
+
   const wordRefs = useRef([]); // Refs for each word element to scroll to
 
   useEffect(() => {
@@ -65,7 +67,7 @@ function Spanish() {
 
   if (loading) {
     return (
-      <div className="about">
+      <div className="loading">
         <Loading className="loading_icon" />
       </div>
     );

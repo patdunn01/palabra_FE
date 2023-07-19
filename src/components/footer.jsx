@@ -5,28 +5,23 @@ export default function Footer() {
   return (
     <div className="footer-container">
       <div>
-        <ul className="footer-menu-list">
-          <li>
+        <div className="footer-menu-list">
             <Link to="/about" className="footer-menu-options">
-              About
+              <p>About</p>
             </Link>
-          </li>
-          <li>
             <Link to="/contact" className="footer-menu-options">
-              Contact
+              <p>Contact</p>
             </Link>
-          </li>
-          <li>
             <Link to="/terms" className="footer-menu-options">
-              Terms
+              <p>Terms</p>
             </Link>
-          </li>
-          <li>
             <Link to="/legal" className="footer-menu-options">
-              Legal
+              <p>Legal</p>
             </Link>
-          </li>
-        </ul>
+            <Link to="/privacy" className="footer-menu-options">
+              <p>Privacy</p>
+            </Link>
+        </div>
       </div>
       <div>
         
@@ -35,7 +30,9 @@ export default function Footer() {
         
       </div>
       <div>
+        <Link to="/">
         <PalabraFooter className="footer_logo" />
+        </Link>
       </div>
     </div>
   );
