@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { ReactComponent as France1 } from "../icons/France_1.svg";
 import { ReactComponent as Spain1 } from "../icons/Spain_1.svg";
 import { ReactComponent as Italy1 } from "../icons/Italy_1.svg";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [clickedButton, setClickedButton] = useState(null);
 
   const handleButtonClick = (route) => {
-    console.log(route)
+    console.log(route);
     setClickedButton(route);
 
     setTimeout(() => {
-      
-      window.location.href = route;
+      // Remove this line since we are using Link now
+      // window.location.href = route;
     }, 1500);
   };
 
@@ -20,8 +21,9 @@ function Home() {
     <div>
       <div className="home">
         <p>Select Language...</p>
-        <div>
-          <button
+        <div className="buttons_container">
+          <Link
+            to="/french"
             className={`language-button-homepage ${
               clickedButton === "/french" ? "clicked" : ""
             }`}
@@ -29,8 +31,9 @@ function Home() {
           >
             <France1 className="button-image" />
             <p>French</p>
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/spanish"
             className={`language-button-homepage ${
               clickedButton === "/spanish" ? "clicked" : ""
             }`}
@@ -38,8 +41,9 @@ function Home() {
           >
             <Spain1 className="button-image" />
             <p>Spanish</p>
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/italian"
             className={`language-button-homepage ${
               clickedButton === "/italian" ? "clicked" : ""
             }`}
@@ -47,7 +51,7 @@ function Home() {
           >
             <Italy1 className="button-image" />
             <p>Italian</p>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
