@@ -8,7 +8,6 @@ function Home() {
   const [clickedButton, setClickedButton] = useState(null);
 
   const handleButtonClick = (route) => {
-    console.log(route);
     setClickedButton(route);
 
     setTimeout(() => {
@@ -20,7 +19,7 @@ function Home() {
   return (
     <div>
       <div className="home">
-        <p>Select Language...</p>
+        <h6>Select Language...</h6>
         <div className="buttons_container">
           <Link
             to="/french"

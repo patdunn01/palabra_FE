@@ -12,6 +12,10 @@ function French() {
   const wordRefs = useRef([]); // Refs for each word element to scroll to
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       fetchFrenchWords();
     }, 4000);

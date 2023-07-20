@@ -9,9 +9,11 @@ function Spanish() {
   const [clickedCorrectAnswers, setClickedCorrectAnswers] = useState([]);
   const [randomWords, setRandomWords] = useState([]);
 
-  console.log("spanish")
-
   const wordRefs = useRef([]); // Refs for each word element to scroll to
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

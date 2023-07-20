@@ -59,6 +59,9 @@ export default function Header() {
             <Link to="/terms" className="menu-options">
               Terms
             </Link>
+            <Link to="/privacy" className="menu-options">
+              Privacy
+            </Link>
           </div>
         )}
       </div>

@@ -5,8 +5,6 @@ import { useEffect } from "react";
 
 export default function About() {
 
-  console.log("hello")
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -6,6 +6,7 @@ import Home from './components/home';
 import Spanish from './components/spanish';
 import French from './components/french';
 import About from './components/about';
+import Privacy from './components/privacy';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/spanish" component={Spanish} />
           <Route path="/french" component={French} />
           <Route path="/about" component={About} />
+          <Route path="/privacy" component={Privacy} />
         </Switch> {/* Change here */}
         <Footer />
       </div>
