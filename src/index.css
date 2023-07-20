@@ -984,4 +984,30 @@ code {
   justify-content: center;
   align-content: center;
 }
+
+  .language-main{
+    justify-content: space-evenly;
+  }
+
+.word {
+  border-bottom: black 0.4rem solid;
+  border-radius: 8rem;
+  background-color: rgb(250, 250, 250);
+  padding: 50px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.words-list-item {
+  list-style: none;
+  background-color: rgb(250, 250, 250);
+  border-radius: 4rem;
+  margin: 5px;
+  padding: 3px;
+  font-size: large;
+  font-weight: 300;
+  font-family: "Nabla", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
 }
