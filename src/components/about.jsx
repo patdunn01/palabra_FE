@@ -10,11 +10,15 @@ export default function About() {
   }, []);
 
   return (
-    <div>
+    <div className="about-container">
+      <div className="about">
       <h1>Our Mission</h1>
+      </div>
       <div className="about">
         <div className="about_paragraph">
+          <div className="about_icon">
           <Bubble className="about_bubble" />
+          </div>
           <p>
             While learning the basics of a language is essential and provides a
             solid foundation, the true beauty and richness of expression come
@@ -35,12 +39,16 @@ export default function About() {
             conversations. Learning higher-level words adds color, precision,
             and elegance to communication.
           </p>
+          <div className="about_icon">
           <TextingBubbles className="texting_bubbles" />
+          </div>
         </div>
       </div>
       <div className="about">
         <div className="about_paragraph">
+        <div className="about_icon">
         <Brain className="brain" />
+        </div>
           <p>
             At Palabra, we embrace the power and beauty of language by guiding
             language learners on a journey to unlock the full potential of their
