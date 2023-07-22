@@ -675,6 +675,9 @@ code {
   92%{
     opacity: 0;
   }
+  100% {
+    opacity: 0;
+  }
 }
 
 #dot2{
@@ -722,6 +725,9 @@ code {
   92%{
     opacity: 0;
   }
+  100% {
+    opacity: 0;
+  }
 }
 
 #dot3{
@@ -767,6 +773,9 @@ code {
     opacity: 1;
   }
   92%{
+    opacity: 0;
+  }
+  100% {
     opacity: 0;
   }
 }
