@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2bcf004.css",
-    "main.js": "/static/js/main.f610a2ba.js",
+    "main.css": "/static/css/main.8cd7110e.css",
+    "main.js": "/static/js/main.ae7e0591.js",
     "static/js/787.c05db095.chunk.js": "/static/js/787.c05db095.chunk.js",
     "static/media/Palabra_header.svg": "/static/media/Palabra_header.641835226e15c066daea02debecfb754.svg",
     "static/media/Loading.svg": "/static/media/Loading.87ac55ee64500e9ba87d412303b8dc72.svg",
@@ -9,16 +9,16 @@
     "static/media/Brain.svg": "/static/media/Brain.3fb4439d4eb9848820b3ca30aadc08da.svg",
     "static/media/SpeechBubbles.svg": "/static/media/SpeechBubbles.a06b38545dbc626cc411faa76ca58041.svg",
     "index.html": "/index.html",
-    "static/media/TextingBubbles.svg": "/static/media/TextingBubbles.6d3db717e6b1f15dda3254bc65c3fe75.svg",
+    "static/media/TextingBubbles.svg": "/static/media/TextingBubbles.d14799d9a1f81b79e00153164c44dc87.svg",
     "static/media/France_1.svg": "/static/media/France_1.1bd0edd3feb9196157113aec9454284c.svg",
     "static/media/Italy_1.svg": "/static/media/Italy_1.0d5a120e823b4ba57ed6ce8f7f27d354.svg",
     "static/media/Spain_1.svg": "/static/media/Spain_1.635820affe34c5db0bc4158f44ea6562.svg",
-    "main.a2bcf004.css.map": "/static/css/main.a2bcf004.css.map",
-    "main.f610a2ba.js.map": "/static/js/main.f610a2ba.js.map",
+    "main.8cd7110e.css.map": "/static/css/main.8cd7110e.css.map",
+    "main.ae7e0591.js.map": "/static/js/main.ae7e0591.js.map",
     "787.c05db095.chunk.js.map": "/static/js/787.c05db095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2bcf004.css",
-    "static/js/main.f610a2ba.js"
+    "static/css/main.8cd7110e.css",
+    "static/js/main.ae7e0591.js"
   ]
 }
