@@ -559,7 +559,7 @@ code {
 }
 
 #text2{
-  scale: 0;
+
   animation: texting_bubble_animation2 15s infinite;
   transform-origin: right center;
 }
@@ -583,7 +583,7 @@ code {
 }
 
 #text3{
-  scale: 0;
+  
   animation: texting_bubble_animation3 15s infinite;
   transform-origin: left center;
 }
@@ -607,7 +607,7 @@ code {
 }
 
 #text4{
-  scale: 0;
+  
   animation: texting_bubble_animation4 15s infinite;
   transform-origin: right bottom;
 }
@@ -973,7 +973,7 @@ code {
     background-color: rgb(214, 214, 214);
     cursor: pointer;
     z-index: 1;
-    
+
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
   }
