@@ -973,6 +973,7 @@ code {
     background-color: rgb(214, 214, 214);
     cursor: pointer;
     z-index: 1;
+    
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
   }
