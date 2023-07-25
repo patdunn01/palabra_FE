@@ -1,8 +1,14 @@
 import React from "react";
 import { ReactComponent as Location } from "../icons/Location.svg";
+import { useEffect } from "react";
 import MapContainer from "./map";
 
 export default function Contact() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contact_container">
       <div className="location_animation">
