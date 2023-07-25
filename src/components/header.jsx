@@ -50,11 +50,11 @@ export default function Header() {
             <Link to="/about" className="menu-options">
               About
             </Link>
-            <Link to="/contact" className="menu-options">
-              Contact
+            <Link to="/french" className="menu-options">
+              French
             </Link>
-            <Link to="/legal" className="menu-options">
-              Legal
+            <Link to="/spanish" className="menu-options">
+              Spanish
             </Link>
             <Link to="/terms" className="menu-options">
               Terms

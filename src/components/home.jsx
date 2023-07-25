@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ReactComponent as France1 } from "../icons/France_1.svg";
 import { ReactComponent as Spain1 } from "../icons/Spain_1.svg";
 import { ReactComponent as Italy1 } from "../icons/Italy_1.svg";
 import { Link } from "react-router-dom";
 
 function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [clickedButton, setClickedButton] = useState(null);
 
   const handleButtonClick = (route) => {
     setClickedButton(route);
+
+
 
     setTimeout(() => {
       // Remove this line since we are using Link now

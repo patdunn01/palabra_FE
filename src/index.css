@@ -929,30 +929,6 @@ code {
     margin-right: 20px;
   }
 
-  .burger-menu-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .burger-menu {
-    width: 37px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
-  .burger-line {
-    width: 35px;
-    height: 2px;
-    border-radius: 50px;
-    background-color: #000;
-    transition: transform 0.3s ease;
-  }
 
   .buttons_container {
     display: flex;
@@ -1235,8 +1211,8 @@ code {
   }
 
   .contact_container{
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1258,5 +1234,74 @@ code {
     align-self: center;
     max-height: 225px;
     max-width: 100px;
+  }
+
+  .burger-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger-menu {
+    width: 37px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger-line {
+    width: 30px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #000;
+    transition: transform 0.3s ease;
+  }
+  
+  .open .burger-line:first-child {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .open .burger-line:nth-child(2) {
+    opacity: 0;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .open .burger-line:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .burger-menu-background {
+    font-size: medium;
+    position: relative;
+    top: 0%;
+    right: 0%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  .menu-options {
+    font-family: "Nabla", cursive;
+    font-family: "Poppins", sans-serif;
+    border-radius: 9px;
+    color: black;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px; /* Adds some right margin for spacing */
+  }
+  
+  .menu-options:hover {
+    background-color: #21212155;
   }
 }
