@@ -69,7 +69,7 @@ function French() {
 
   if (loading) {
     return (
-      <div className="about">
+      <div className="loading">
         <Loading className="loading_icon" />
       </div>
     );
