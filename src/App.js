@@ -7,6 +7,7 @@ import Spanish from './components/spanish';
 import French from './components/french';
 import About from './components/about';
 import Privacy from './components/privacy';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/french" component={French} />
           <Route path="/about" component={About} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/contact" component={Contact} />
         </Switch> {/* Change here */}
         <Footer />
       </div>
