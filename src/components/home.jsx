@@ -2,25 +2,20 @@ import React, { useState, useEffect } from "react";
 import { ReactComponent as France1 } from "../icons/France_1.svg";
 import { ReactComponent as Spain1 } from "../icons/Spain_1.svg";
 import { ReactComponent as Italy1 } from "../icons/Italy_1.svg";
+import { ReactComponent as Germany1 } from "../icons/Germany_1.svg";
 import { Link } from "react-router-dom";
 
 function Home() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const [clickedButton, setClickedButton] = useState(null);
 
   const handleButtonClick = (route) => {
     setClickedButton(route);
 
-
-
-    setTimeout(() => {
-      // Remove this line since we are using Link now
-      // window.location.href = route;
-    }, 1500);
+    setTimeout(() => {}, 1500);
   };
 
   return (
@@ -57,6 +52,16 @@ function Home() {
           >
             <Italy1 className="button-image" />
             <p>Italian</p>
+          </Link>
+          <Link
+            to="/german"
+            className={`language-button-homepage ${
+              clickedButton === "/german" ? "clicked" : ""
+            }`}
+            onClick={() => handleButtonClick("/italian")}
+          >
+            <Germany1 className="button-image" />
+            <p>German</p>
           </Link>
         </div>
       </div>
