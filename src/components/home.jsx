@@ -3,6 +3,7 @@ import { ReactComponent as France1 } from "../icons/France_1.svg";
 import { ReactComponent as Spain1 } from "../icons/Spain_1.svg";
 import { ReactComponent as Italy1 } from "../icons/Italy_1.svg";
 import { ReactComponent as Germany1 } from "../icons/Germany_1.svg";
+import { ReactComponent as BubblesSVG } from "../icons/Colour_speech1.svg";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -20,6 +21,13 @@ function Home() {
 
   return (
     <div>
+      <div className="home-about">
+        <h2>Colour the Conversation with Palabra</h2>
+        <div className="home-about-bubble">
+          <BubblesSVG />
+        </div>
+      </div>
+
       <div className="home">
         <h6>Select Language...</h6>
         <div className="buttons_container">

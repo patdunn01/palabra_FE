@@ -10,6 +10,7 @@ import German from './components/german';
 import About from './components/about';
 import Privacy from './components/privacy';
 import Contact from './components/contact';
+import MapTesting from './components/maptest'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/contact" component={Contact} />
+          <Route path="/maptest" component={MapTesting} />
         </Switch> {/* Change here */}
         <Footer />
       </div>

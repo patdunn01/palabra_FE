@@ -99,6 +99,7 @@ function Spanish() {
           >
             <p className="words-list-title">{word.word}</p>
             <p className="words-list-sentence">{word.sentence}</p>
+            <p className="words-list-question">In English "{word.word}" is...</p> 
             {word.answers.sort().map((answer) => (
               <button
                 className="words-list-item"

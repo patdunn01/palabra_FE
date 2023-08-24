@@ -12,6 +12,134 @@ code {
     monospace;
 }
 
+.cls-1 {
+  fill-rule: evenodd;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+  fill: #ffffff;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7 {
+  stroke: #979797;
+}
+
+.cls-1,
+.cls-4,
+.cls-7 {
+  stroke-miterlimit: 4.01;
+}
+
+.cls-8 {
+  filter: url(#drop-shadow-1);
+}
+
+.cls-2 {
+  stroke-miterlimit: 10;
+}
+
+.cls-3 {
+  stroke-miterlimit: 4.01;
+}
+
+.cls-5 {
+  stroke-miterlimit: 4.01;
+}
+
+.cls-7 {
+  fill: rgba(193, 193, 193, 0);
+}
+
+#Layer_2 {
+  height: 800px;
+  width: 800px;
+}
+
+#drop-shadow-1 {
+  position: absolute;
+}
+
+#germany:hover {
+  animation: germany 0.2s ease-in forwards;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgb(255, 255, 255);
+}
+
+@keyframes germany {
+  100% {
+    transform: rotate3d(2);
+    filter: drop-shadow(1.5px 1.5px 0px black) drop-shadow(1.5px 1.5px 0px red)
+      drop-shadow(1.5px 1.5px 0px yellow)
+      drop-shadow(1.5px 1.5px 8px rgb(0, 0, 0));
+  }
+}
+
+#france:hover {
+  animation: france 0.2s ease-in forwards;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgb(255, 255, 255);
+}
+
+@keyframes france {
+  100% {
+    transform: rotate3d(2);
+    filter: drop-shadow(1.5px 1.5px 0px blue) drop-shadow(1.5px 1.5px 0px white)
+      drop-shadow(1.5px 1.5px 0px red) drop-shadow(1.5px 1.5px 8px rgb(0, 0, 0));
+  }
+}
+
+#spain:hover {
+  cursor: pointer;
+  animation: spain 0.2s ease-in forwards;
+  position: absolute;
+  z-index: 2;
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgb(255, 255, 255);
+}
+
+@keyframes spain {
+  100% {
+    transform: rotate3d(2);
+    filter: drop-shadow(1.5px 1.5px 0px red) drop-shadow(1.5px 1.5px 0px yellow)
+      drop-shadow(1.5px 1.5px 0px red) drop-shadow(1.5px 1.5px 8px rgb(0, 0, 0));
+  }
+}
+
+#italy:hover {
+  cursor: pointer;
+  animation: italy 0.2s ease-in forwards;
+  position: absolute;
+  z-index: 1;
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgb(255, 255, 255);
+}
+
+@keyframes italy {
+  100% {
+    transform: rotate3d(2);
+    filter: drop-shadow(1.5px 1.5px 0px green)
+      drop-shadow(1.5px 1.5px 0px white) drop-shadow(1.5px 1.5px 0px red)
+      drop-shadow(1.5px 1.5px 8px rgb(0, 0, 0));
+  }
+}
+
 .header {
   background-color: white;
   display: grid;
@@ -94,6 +222,83 @@ code {
 
 .menu-options:hover {
   background-color: #21212155;
+}
+
+.home-about {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: #212121;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+  max-width: 100vw;
+}
+
+.home-about h2 {
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.home-about-bubble{
+  position: relative;
+  z-index: 1;
+  max-width: 100vw;
+}
+
+.path {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+ 
+}
+
+.path:hover {
+  transform-origin: center center;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
+}
+
+.path1 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.path1:hover {
+  transform-origin: center center;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
+}
+
+.path2 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.path2:hover {
+  transform-origin: center center;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
+}
+
+.path3 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.path3:hover {
+  transform-origin: center center;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
 }
 
 .home {
@@ -225,6 +430,11 @@ code {
   font-weight: 300;
   font-family: "Nabla", cursive;
   font-family: "Poppins", sans-serif;
+}
+
+.words-list-question {
+  align-self: left;
+  color: grey;
 }
 
 .words-list-item:hover {
@@ -923,12 +1133,15 @@ code {
     height: 100px;
   }
 
+  .home-about {
+    max-height: 40vh;
+  }
+
   .home_page_logo {
     height: 60px;
     width: auto;
     margin-right: 20px;
   }
-
 
   .buttons_container {
     display: flex;
@@ -996,10 +1209,6 @@ code {
 
   .home {
     height: auto;
-  }
-
-  .home h6 {
-    display: none;
   }
 
   .buttons_container {
@@ -1210,7 +1419,8 @@ code {
     }
   }
 
-  .contact_container{
+
+  .contact_container {
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: flex;
@@ -1223,13 +1433,13 @@ code {
   .contact_container p {
     text-align: center;
   }
-  
+
   .contact_map {
     align-self: center;
     max-height: 300px;
     max-width: 300px;
   }
-  
+
   .location_animation {
     align-self: center;
     max-height: 225px;
@@ -1260,23 +1470,23 @@ code {
     background-color: #000;
     transition: transform 0.3s ease;
   }
-  
+
   .open .burger-line:first-child {
     transform: translateY(10px) rotate(45deg);
   }
-  
+
   .open .burger-line:nth-child(2) {
     opacity: 0;
     align-self: center;
     justify-self: center;
   }
-  
+
   .open .burger-line:last-child {
     transform: translateY(-9px) rotate(-45deg);
     align-self: center;
     justify-self: center;
   }
-  
+
   .burger-menu-background {
     font-size: medium;
     position: relative;
@@ -1290,7 +1500,7 @@ code {
     align-items: center;
     z-index: 3;
   }
-  
+
   .menu-options {
     font-family: "Nabla", cursive;
     font-family: "Poppins", sans-serif;
@@ -1300,8 +1510,11 @@ code {
     padding-left: 5px;
     padding-right: 5px; /* Adds some right margin for spacing */
   }
-  
+
   .menu-options:hover {
     background-color: #21212155;
   }
+
 }
+
+  
