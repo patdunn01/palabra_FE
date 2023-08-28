@@ -255,46 +255,9 @@ code {
 .path {
   opacity: 0;
   transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
- 
 }
 
 .path:hover {
-  transform-origin: center center;
-  opacity: 1;
-  transform: scale(1.1);
-  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
-}
-
-.path1 {
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.path1:hover {
-  transform-origin: center center;
-  opacity: 1;
-  transform: scale(1.1);
-  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
-}
-
-.path2 {
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.path2:hover {
-  transform-origin: center center;
-  opacity: 1;
-  transform: scale(1.1);
-  transition: opacity 0.1s ease-in-out, transform 5s ease-in-out;
-}
-
-.path3 {
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.path3:hover {
   transform-origin: center center;
   opacity: 1;
   transform: scale(1.1);
@@ -1123,7 +1086,7 @@ code {
   width: 90vw;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .header {
     display: flex;
     flex-wrap: wrap;
@@ -1143,8 +1106,9 @@ code {
     margin-right: 20px;
   }
 
-  .home-about-bubble{
-    display: none;
+  .path {
+    pointer-events: none;
+    transition: none;
   }
 
   .buttons_container {
