@@ -1113,7 +1113,7 @@ code {
   }
 
   .path {
-    display: none;
+    opacity: 1;
     pointer-events: none;
     transition: none;
     max-width: 99vw;
