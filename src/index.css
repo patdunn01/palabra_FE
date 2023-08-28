@@ -1110,6 +1110,7 @@ code {
     display: none;
     pointer-events: none;
     transition: none;
+    max-width: 99vw;
   }
 
   .path:active{
