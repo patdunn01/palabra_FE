@@ -8,7 +8,7 @@ export default function MapTesting() {
   useEffect(() => {
     // jQuery function to handle hover and reordering
     $(".svg-group").hover(function () {
-      $(this).appendTo("#Layer_3"); // Move the hovered group to the end (on top)
+      $(this).appendTo("#Layer_3"); // Move the hovered group to the end
     });
   }, []);
 
