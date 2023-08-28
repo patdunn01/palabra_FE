@@ -1099,7 +1099,6 @@ code {
 
   .home-about {
     height: 40vh;
-    border: 3px solid green;
   }
 
   .home_page_logo {
@@ -1110,7 +1109,6 @@ code {
 
   .home-about-bubble{
     display: none;
-    border: 3px solid blue;
   }
 
   .path {
