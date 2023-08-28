@@ -250,6 +250,7 @@ code {
   position: relative;
   z-index: 1;
   max-width: 100vw;
+  border: 3px solid red;
 }
 
 .path {
@@ -1104,6 +1105,10 @@ code {
     height: 60px;
     width: auto;
     margin-right: 20px;
+  }
+
+  .home-about-bubble{
+    border: 3px solid blue;
   }
 
   .path {
