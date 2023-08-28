@@ -1111,6 +1111,10 @@ code {
     transition: none;
   }
 
+  .path:active{
+    display: none;
+  }
+
   .buttons_container {
     display: flex;
     flex-wrap: wrap;
