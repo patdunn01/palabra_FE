@@ -1109,14 +1109,16 @@ code {
   }
 
   .home-about-bubble{
+    display: none;
     border: 3px solid blue;
   }
 
   .path {
-    opacity: 1;
+    display: none;
     pointer-events: none;
     transition: none;
-    max-width: 99vw;
+    width: 0vw;
+    height: 0vh;
   }
 
   .path:active{
