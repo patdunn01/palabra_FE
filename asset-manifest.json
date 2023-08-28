@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4050375.css",
-    "main.js": "/static/js/main.e21455d4.js",
+    "main.css": "/static/css/main.d5f70fba.css",
+    "main.js": "/static/js/main.0e205653.js",
     "static/js/787.c05db095.chunk.js": "/static/js/787.c05db095.chunk.js",
+    "static/media/Colour_speech1.svg": "/static/media/Colour_speech1.d35b2abcb358517f7fb42972509ecc48.svg",
     "static/media/Palabra_header.svg": "/static/media/Palabra_header.641835226e15c066daea02debecfb754.svg",
     "static/media/Loading.svg": "/static/media/Loading.87ac55ee64500e9ba87d412303b8dc72.svg",
     "static/media/Palabra_footer.svg": "/static/media/Palabra_footer.158fed0fd227b42a1aa0d9903a255f40.svg",
@@ -15,12 +16,12 @@
     "static/media/Italy_1.svg": "/static/media/Italy_1.0d5a120e823b4ba57ed6ce8f7f27d354.svg",
     "static/media/Germany_1.svg": "/static/media/Germany_1.770567ee2000f1b06f3f10442581d260.svg",
     "static/media/Spain_1.svg": "/static/media/Spain_1.635820affe34c5db0bc4158f44ea6562.svg",
-    "main.c4050375.css.map": "/static/css/main.c4050375.css.map",
-    "main.e21455d4.js.map": "/static/js/main.e21455d4.js.map",
+    "main.d5f70fba.css.map": "/static/css/main.d5f70fba.css.map",
+    "main.0e205653.js.map": "/static/js/main.0e205653.js.map",
     "787.c05db095.chunk.js.map": "/static/js/787.c05db095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4050375.css",
-    "static/js/main.e21455d4.js"
+    "static/css/main.d5f70fba.css",
+    "static/js/main.0e205653.js"
   ]
 }
