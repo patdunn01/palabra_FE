@@ -26,6 +26,7 @@ function Home() {
         <div className="home-about-bubble">
           <BubblesSVG />
         </div>
+        
       </div>
 
       <div className="home">

@@ -1097,7 +1097,7 @@ code {
   }
 
   .home-about {
-    max-height: 40vh;
+    height: 40vh;
   }
 
   .home_page_logo {
@@ -1107,6 +1107,7 @@ code {
   }
 
   .path {
+    display: none;
     pointer-events: none;
     transition: none;
   }
